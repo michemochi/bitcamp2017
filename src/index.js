@@ -22,7 +22,7 @@ function doSearch(q, offset=0) {
         var result = response;
         var retval = result.list.item;
 
-        if (result.list.total > result.list.stop + 1) {
+        if (result.list.total > result.list.end + offset) {
                 return retval.concat(doSearch(q, result.list.end - result.list.start));
         } else {
                 return retval;
