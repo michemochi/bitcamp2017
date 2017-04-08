@@ -11,15 +11,17 @@ import './index.css';
 var api_key = 'TFGsLFJYAH8AQ1iX3LFejydqvYlqVP2fsLqyBjgj';
 
 function doSearch(q, offset=0) {
-          var result =
-                      fetch('https://api.nal.usda.gov/ndb/search?api_key=' + api_key + '&q=' + q + '&format=json&offset=' + offset);
-            result = JSON.parse(result);
-              var retval = result.list.item;
-                if (result.list.total > result.list.stop + 1) {
-                              return retval.concat(doSearch(q, result.list.end - result.list.start));
-                                } else {
-                                              retval;
-                                                }
+        var url = 'https://api.nal.usda.gov/ndb/search?api_key=' + api_key + '&q=' + q + '&format=json&offset=' + offset;
+        console.log(url);
+        return fetch(url)
+                .then((response) => response.json())
+                .then((result) => {
+                        var retval = result.list.item;
+                        if (result.list.total > result.list.stop + 1) {
+                                return retval.concat(doSearch(q, result.list.end - result.list.start));
+                        } else {
+                                retval;
+                        }});
 }
 
 ReactDOM.render(
