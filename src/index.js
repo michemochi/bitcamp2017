@@ -23,13 +23,21 @@ function doSearch(q, offset=0) {
         var retval = result.list.item;
 
         if (result.list.total > result.list.end + offset) {
-                return retval.concat(doSearch(q, result.list.end - result.list.start));
+                return retval.concat(doSearch(q, result.list.end + offset));
         } else {
                 return retval;
         }
 }
 
+function formatItems(items, index = 0) {
+    if (index === items.length - 1) {
+        return [<div class = "foodIteem">{items[index].name}</div>];
+    } else {
+        return [<div class = "foodIteem">{items[index].name}</div>].concat(formatItems(items, index + 1));
+    }
+}
+
 ReactDOM.render(
-                  <span>{JSON.stringify(doSearch('Nutella'))}</span>,
+                  <span>{JSON.stringify(doSearch('apple'))}</span>,
                     document.getElementById('root')
                );
