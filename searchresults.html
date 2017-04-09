@@ -1,0 +1,102 @@
+<html>
+
+<link rel="stylesheet" href="myStyles2.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<div class="topnav">
+  <img src = "logomaker.png">
+  <form>
+  <input type="text" name="search" placeholder="Search products..."></center>
+	</form>
+  <a href="#home"><font face="arial" size = 2.7>About</font></a>
+  <a href="#news"><font face="arial" size = 2.7>Contact</font></a>
+  <a href="#contact"><font face="arial" size = 2.7>Updates</font></a>
+  <a href="#about"><font face="arial" size = 2.7>Home</font></a>
+</div>
+
+<div class = "mainbody">
+	<h2><font face = "arial">Search Results</font> </h2>
+	<hr>
+</div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+ 
+<div class = "endbody"><center>
+	<a href = "#about"><font face ="arial" size = 2.5 color = "white" padding = 3%>About WillThisKill.Me</font></a>
+	<a href = "#info"><font face = "arial" size = 2.5 color = "white" padding = 3%>USDA Information Page</font></a><a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-google"></a>
+	<a href="#" class="fa fa-linkedin"></a>
+	<a href="#" class="fa fa-youtube"></a>
+				
+	<p><font color = "white" face = "arial" size = 2.5>
+					&copy; 2017 willthiskill.me.
+											Data based on USDA Food and Nutrition Database.</p></center>
+									</font></div>
+</body>
+</html>
