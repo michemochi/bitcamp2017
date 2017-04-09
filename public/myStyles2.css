@@ -1,7 +1,3 @@
-* {
-  font-family: Arial, arial, sans-serif;
-}
-
 body {margin:0;}
 
 .topnav {
@@ -13,24 +9,24 @@ body {margin:0;}
   padding-right: 7%;
 }
 
-.topnav p {
-  float: left;  
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  
-}
 .topnav a {
   float: right;
-  display: block;
+  display: inline;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav img {
+	float: left;
+	
+}
+.topnav form {
+  float: center;
+  display: inline;
+  padding-left: 27%;
 }
 
 .topnav a:hover {
@@ -55,8 +51,8 @@ input[type=text] {
 
 .mainbody {
 	float: center;
-    background-color: #4285f4;
-	padding-top: 3%;
+    background-color: "white";
+	padding-top: 1%;
     padding-left: 7%;
     padding-right: 7%;
     padding-bottom: 2%;
